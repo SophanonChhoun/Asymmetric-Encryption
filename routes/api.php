@@ -32,11 +32,8 @@ Route::group([
         Route::post('/decrypt-public', [RSAController::class, 'decryptPublic']);
     });
     Route::group(['prefix' => 'end-to-end'], function () {
-        Route::get('/generate-keys-pairs', [EndToEndController::class, 'generateKeysPairs']);
         Route::get('/encrypt', [EndToEndController::class, 'encrypt']);
-        Route::get('/encrypt-public', [EndToEndController::class, 'encryptPublic']);
         Route::post('/decrypt', [EndToEndController::class, 'decrypt']);
-        Route::post('/decrypt-public', [EndToEndController::class, 'decryptPublic']);
     });
 });
 

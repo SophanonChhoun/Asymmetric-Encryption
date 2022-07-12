@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class EndToEndController extends Controller
 {
-    public function encryptPublic()
+    public function encrypt()
     {
         $data = 'Teacher Coca.';
         $valid = openssl_public_encrypt($data, $crypted, file_get_contents(public_path('public-dara.pem')), OPENSSL_PKCS1_PADDING);
